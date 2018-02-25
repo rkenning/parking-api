@@ -32,7 +32,7 @@ public class ParkingController {
 
     private Prediction makeDummyPrediction() {
         final Prediction prediction = new Prediction();
-        prediction.setBucket(3);
+        prediction.setBucket(5);
         prediction.setProbabilities(asList(
                 9, 10, 5, 10, 3, 20, 5, 19, 5, 9, 5
         ));
