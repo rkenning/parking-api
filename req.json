@@ -1,7 +1,7 @@
 {
   "carpark": "Avon Street CP",
   "timeOfDay": 12.5, //0..23.99
-  "weekday": 4, //1..7
+  "weekDay": 4, //1..7
   "weekNumber": 42, //1..53
   "rugby": true,
   "rugbyHomeWin": false,
