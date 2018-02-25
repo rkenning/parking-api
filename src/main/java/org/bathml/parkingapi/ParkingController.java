@@ -1,6 +1,5 @@
 package org.bathml.parkingapi;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,10 +10,16 @@ import static java.util.Arrays.asList;
 public class ParkingController {
 
     private ParkingService service;
+    private ParkingValidator validator;
+
+    ParkingController(final ParkingService service, final ParkingValidator validator) {
+        this.service = service;
+        this.validator = validator;
+    }
 
     @PostMapping("/parking")
     public ParkingResponse post(final @RequestBody ParkingRequest req) {
-        //Return dummy data for now.
+        validator.validate(req);
         return makeDummyResponse();
     }
 
@@ -41,8 +46,4 @@ public class ParkingController {
         return details;
     }
 
-    @Autowired
-    public void setService(final ParkingService service) {
-        this.service = service;
-    }
 }
