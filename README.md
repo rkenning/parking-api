@@ -4,7 +4,7 @@ This is the API that clients should hit (rather than the h2o model model directl
 
 ## Requirements
 
-Java 8
+Java 8 JDK
 
 ## Preparation
 
@@ -14,11 +14,18 @@ The model currently only returns dummy data.
 
 ## Running the server
 
-Run the following in the root of the project:
+For non Windows OS Run the following in the root of the project:
 
 ```
 ./gradlew bootRun
 ```
+
+For Windows based OS Run the following in the root of the project:
+
+```
+gradlew bootRun
+```
+
 
 ## Stop the server
 Do `ctrl+c` in the command line window where this server is running.
